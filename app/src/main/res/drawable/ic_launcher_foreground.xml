@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Top-Left Scan Corner -->
+    <path
+        android:pathData="M27,37 L27,27 L37,27"
+        android:strokeColor="#3CCBC5"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Top-Right Scan Corner -->
+    <path
+        android:pathData="M71,27 L81,27 L81,37"
+        android:strokeColor="#3CCBC5"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Bottom-Left Scan Corner -->
+    <path
+        android:pathData="M27,71 L27,81 L37,81"
+        android:strokeColor="#3CCBC5"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Bottom-Right Scan Corner -->
+    <path
+        android:pathData="M71,81 L81,81 L81,71"
+        android:strokeColor="#3CCBC5"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Central Document Paper -->
+    <!-- Document Body with Folded Top-Right Corner -->
+    <path
+        android:pathData="M35,32 L63,32 L73,42 L73,76 C73,77.5 71.5,79 70,79 L35,79 C33.5,79 32,77.5 32,76 L32,35 C32,33.5 33.5,32 35,32 Z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Folded Corner Triangle -->
+    <path
+        android:pathData="M63,32 L63,42 L73,42 Z"
+        android:fillColor="#CFD8DC" />
+
+    <!-- Document Text Lines -->
+    <path
+        android:pathData="M38,47 L60,47"
+        android:strokeColor="#90A4AE"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M38,55 L67,55"
+        android:strokeColor="#90A4AE"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M38,63 L56,63"
+        android:strokeColor="#90A4AE"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M38,71 L64,71"
+        android:strokeColor="#90A4AE"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+
+    <!-- Scanning Laser Beam -->
+    <path
+        android:pathData="M24,54 L84,54"
+        android:strokeColor="#3CCBC5"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+
+    <!-- Laser Glow Indicator Dots -->
+    <path
+        android:pathData="M54,54 L54,54.01"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+</vector>
