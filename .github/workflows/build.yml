@@ -39,8 +39,9 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
-      - name: 3. Set up Android SDK
-        uses: android-actions/setup-android@v3
+      - name: 3. Setujui Lisensi Android SDK
+        run: |
+          yes | sdkmanager --licenses > /dev/null 2>&1 || true
 
       - name: 4. Siapkan File Konfigurasi Lingkungan (.env)
         run: |
@@ -84,7 +85,7 @@ jobs:
         run: ./gradlew assembleDebug --stacktrace
 
       - name: 10. Build Release APK
-        if: ${{ github.event.inputs.build_type == 'release' || github.event.inputs.build_type == 'all' }}
+        if: ${{ github.event_name == 'workflow_dispatch' && (github.event.inputs.build_type == 'release' || github.event.inputs.build_type == 'all') }}
         env:
           STORE_PASSWORD: ${{ secrets.STORE_PASSWORD || 'android' }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS || 'upload' }}
@@ -108,7 +109,7 @@ jobs:
           retention-days: 14
 
       - name: 13. Unggah Release APK Artifact
-        if: ${{ github.event.inputs.build_type == 'release' || github.event.inputs.build_type == 'all' }}
+        if: ${{ github.event_name == 'workflow_dispatch' && (github.event.inputs.build_type == 'release' || github.event.inputs.build_type == 'all') }}
         uses: actions/upload-artifact@v4
         with:
           name: KemSken-release-apk
